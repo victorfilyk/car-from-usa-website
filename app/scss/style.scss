@@ -1,0 +1,75 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+
+.header {
+  background-image: url("../images/header-background.png");
+  height: 700px;
+  background: $main-color;
+  color: #fff;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 46px 0;
+  }
+  &__phone {
+    font-size: 36px;
+    line-height: 53px;
+    color: #fff;
+  }
+  &__main{
+    position: absolute;
+  }
+  &__heading {
+    font-size: 72px;
+    line-height: 97px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+  &__subHeading {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+  }
+  &__description {
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+  }
+  &__btn {
+    background: $accent-color;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all .3s linear;
+    &:hover{
+      color: $accent-color;
+      background: #fff;
+    }
+  }
+  &__social {
+    width: 250px;
+    margin-top: 74px;
+  }
+  &__socialInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 120px;
+  }
+  &__autoImg{
+    position: relative;
+    top: -133px;
+    left: 380px;
+  }
+}
