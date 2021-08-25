@@ -5,9 +5,10 @@
 @import "global";
 
 .header {
-  background-image: url("../images/header-background.png");
+  background-image: url("../images/header-background.jpg");
   height: 700px;
-  background: $main-color;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
   &__nav {
     display: flex;
@@ -19,7 +20,7 @@
     line-height: 53px;
     color: #fff;
   }
-  &__main{
+  &__main {
     position: absolute;
   }
   &__heading {
@@ -40,22 +41,6 @@
     font-weight: 300;
     line-height: 27px;
   }
-  &__btn {
-    background: $accent-color;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 300;
-    display: inline-block;
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    transition: all .3s linear;
-    &:hover{
-      color: $accent-color;
-      background: #fff;
-    }
-  }
   &__social {
     width: 250px;
     margin-top: 74px;
@@ -67,9 +52,136 @@
     margin: 0 auto;
     max-width: 120px;
   }
-  &__autoImg{
+  &__autoImg {
     position: relative;
     top: -133px;
     left: 380px;
+  }
+}
+
+.main {
+  &__inner {
+    margin-top: 300px;
+  }
+}
+
+.service {
+  color: $black-color;
+  &__headingWrapper {
+    position: relative;
+  }
+  &__heading {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 53px;
+    color: $main-color;
+  }
+  &__headingLine {
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    background-color: $main-color;
+    position: absolute;
+    top: 23px;
+    left: 218px;
+  }
+  &__content {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: flex-end;
+  }
+  &__description {
+    flex: 50%;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+  }
+  &__nav {
+    flex: 50%;
+  }
+  &__descriptionHeading {
+    color: $accent-color;
+    display: inline-block;
+    margin-top: 50px;
+    &:last-of-type {
+      margin-top: 70px;
+    }
+  }
+  &__descriptionText {
+    margin-top: 12px;
+    max-width: 504px;
+  }
+  &__navItem {
+    border: 1px solid $grey-color;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    width: 450px;
+    max-width: 500px;
+    margin-bottom: 12px;
+    transition: all 0.1s linear;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      width: 500px;
+      border: 2px solid $accent-color;
+    }
+    &:hover .service__navNumber {
+      color: $accent-color;
+    }
+    &:hover .service__navHeading {
+      color: $accent-color;
+    }
+    &:hover .service__navDescription {
+      color: #000;
+    }
+  }
+  &__navNumber {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 53px;
+    color: $grey-color;
+    transform: rotate(-90deg);
+    margin-right: 45px;
+  }
+  &__navText {
+  }
+  &__navHeading {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  &__navDescription {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+  }
+  &__btnArea{
+    position: absolute;
+  }
+  &__aroundBtnArea{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -35px;
+    left: 245px;
+  }
+  &__btnLine {
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background-color: $grey-color;
+  }
+  &__btnClickLabel {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: $grey-color;
+    margin-left: 10px;
   }
 }
