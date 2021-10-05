@@ -20,9 +20,6 @@
     line-height: 53px;
     color: #fff;
   }
-  &__main {
-    position: absolute;
-  }
   &__heading {
     font-size: 72px;
     line-height: 97px;
@@ -243,6 +240,7 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 27px;
+    transition: all 0.2s linear;
     &:hover {
       background-color: $accent-color;
       color: #fff;
@@ -262,8 +260,6 @@
 .about {
   &__inner {
     display: flex;
-    // justify-content: center;
-    // margin-bottom: 30px;
   }
   &__contacts {
     flex: 50%;
@@ -272,12 +268,10 @@
     flex: 50%;
     background-color: $main-color;
     color: #fff;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-  }
-  &__leaveRequestHeading {
-    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 0 0;
   }
   &__leaveRequestHeadingTitle {
     color: #fff;
@@ -286,7 +280,7 @@
     background-color: #fff;
   }
   &__contactsHeading {
-    margin: 50px 0 65px 0;
+    margin: 50px 0 50px 0;
   }
   &__info {
     font-weight: 300;
@@ -295,7 +289,10 @@
     color: $black-color;
   }
   &__infoBlock {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 57px;
+    }
   }
   &__infoBlockTitle {
     color: $accent-color;
@@ -307,18 +304,73 @@
   &__formInputWrapper {
     position: relative;
     max-width: 450px;
+    margin-bottom: 78px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    &:first-child {
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
   }
   &__formInput {
     width: 450px;
     height: 75px;
-    // opacity: 0;
+    background: transparent;
+    border: none;
     border: 1px solid #fff;
+    color: $grey-color;
+    padding: 20px;
+    &:focus {
+      outline: none;
+    }
   }
   &__formInputLabel {
-    color: #000;
+    color: $grey-color;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    &:hover {
+      cursor: text;
+    }
+  }
+  &__formButton {
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  &__phone {
+    color: $black-color;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.footer {
+  background: $main-color;
+  &__inner {
+    padding: 24px 0 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__socialInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 120px;
+  }
+  &__policy {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $grey-color;
+    }
   }
 }

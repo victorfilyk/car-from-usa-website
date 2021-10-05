@@ -13,7 +13,9 @@ $black-color: #2c2b2b;
   height: 50px;
   text-align: center;
   line-height: 50px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
+  border: 1px solid $accent-color;
+  text-transform: uppercase;
   &:hover {
     color: $accent-color;
     background: #fff;
@@ -32,16 +34,13 @@ $black-color: #2c2b2b;
     color: $main-color;
     text-transform: uppercase;
   }
-  &__lineWrapper {
-    position: relative;
-  }
   &__line {
     display: inline-block;
     width: 80px;
     height: 3px;
     background-color: $main-color;
-    position: absolute;
-    top: 23px;
+    position: relative;
+    top: 8px;
     left: 20px;
   }
 }
