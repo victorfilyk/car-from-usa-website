@@ -21,23 +21,27 @@ $black-color: #2c2b2b;
   }
 }
 
-.sectionHeadingContainer {
-  position: relative;
-}
-
 .sectionHeading {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 53px;
-  color: $main-color;
-}
-
-.sectionHeadingLine {
-  display: inline-block;
-  width: 80px;
-  height: 3px;
-  background-color: $main-color;
-  position: absolute;
-  top: 23px;
-  left: 218px;
+  &__inner {
+    display: flex;
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 53px;
+    color: $main-color;
+    text-transform: uppercase;
+  }
+  &__lineWrapper {
+    position: relative;
+  }
+  &__line {
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    background-color: $main-color;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+  }
 }
